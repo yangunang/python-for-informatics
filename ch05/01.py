@@ -27,8 +27,11 @@ def calculator():
     while True:
         num = raw_input("Enter a number: ")
         if num == 'done':
-            print total, count, (total / count)
+            if count > 0:
+              print total, count, (total / count)
             break
+            else:
+                continue
         else:
             try:
                 total += float(num)
